@@ -1,0 +1,22 @@
+@import 'simplelightbox/dist/simple-lightbox.css';
+
+.galleryList {
+  padding: 24px 0;
+  position: relative;
+  margin: 0 auto;
+  width: 1128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.galleryItem {
+  flex-basis: calc((100% - 24px * 2) / 3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

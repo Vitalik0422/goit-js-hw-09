@@ -1,23 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>GoIT: Home Work - 9 main page</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <div class="container">
+        <section class="main-page">
+          <h1>
+            <span class="first-word-name-company">GO</span>
+            <span class="secondary-word-name-company">IT</span>
+          </h1>
+          <p class="module-description">
+            Модуль 9 — NPM та модульність Навчились працювати з JSON форматом,
+            веб- та локальним сховищем, підключати Node.js і NPM,
+            використовувати ESModules (import/export) та встановлювати сторонні
+            пакети. Практика — галерея зображень із SimpleLightbox та збереження
+            даних форм.
+          </p>
+          <h2>Домашнє завдання №9</h2>
+          <nav class="page-navigation">
+            <load
+              src="./partials/ui/linkButton.html"
+              label="Галарея"
+              href="./1-gallery.html"
+            />
+            <load
+              src="./partials/ui/linkButton.html"
+              label="Форма для відгуків"
+              href="/2-form.html"
+            />
+          </nav>
+        </section>
+      </div>
     </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
   </body>
 </html>

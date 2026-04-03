@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoII: Home Work 9 - form feedback</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/2-form.css" />
+  </head>
+  <body>
+    <load
+      src="./partials/ui/linkButton.html"
+      href="./index.html"
+      label="Повернутись назад"
+      class="fixedLink"
+    />
+    <div class="container form-container">
+      <form class="feedback-form" autocomplete="off">
+        <label class="input-label">
+          <span class="label-title">Email</span>
+          <input class="input-form" type="text" name="email" autofocus />
+        </label>
+        <label class="textarea-label">
+          <span class="label-title">Message</span>
+          <textarea class="textarea-form" name="message" rows="8"></textarea>
+        </label>
+        <load src="./partials/ui/button.html" type="submit" label="Submit" />
+      </form>
+    </div>
+  </body>
+  <script type="module" src="./js/2-form.js"></script>
+</html>
