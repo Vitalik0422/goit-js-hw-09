@@ -1,4 +1,5 @@
 const feedbackForm = document.querySelector('.feedback-form');
+const notification = document.querySelector('.notification');
 
 const formData = {
   email: '',
@@ -10,7 +11,7 @@ const storageService = {
     const isValid = checkData(data, type);
     if (isValid && type === 'submit') {
       Object.assign(formData, data);
-      console.log('formData: ', formData);
+      showError(false);
       this.resetLocalStorage();
       return true;
     } else if (isValid && type === 'input') {
@@ -50,12 +51,18 @@ const checkData = (data, type) => {
     type === 'submit' &&
     (data.email.length === 0 || data.message.length === 0)
   ) {
-    console.log('Fill please all fields');
+    showError(true);
     return false;
   } else if (data.email.length === 0 && data.message.length === 0) {
     return false;
   }
   return true;
+};
+
+const showError = state => {
+  state
+    ? notification.classList.add('isActive')
+    : notification.classList.remove('isActive');
 };
 
 const handelEvent = e => {
