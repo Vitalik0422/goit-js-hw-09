@@ -66,7 +66,7 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.galleryList');
+const gallery = document.querySelector('.gallery');
 
 const imgItem = images.map(item => {
   const img = document.createElement('img');
@@ -82,7 +82,7 @@ const imgItem = images.map(item => {
 });
 gallery.append(...imgItem);
 
-const galleryLightBox = new SimpleLightbox('.galleryList a', {
+const galleryLightBox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionSelector: 'img',
   captionsData: 'alt',
