@@ -12,7 +12,9 @@ const storageService = {
     if (isValid && type === 'submit') {
       Object.assign(formData, data);
       showError(false);
+      console.log(formData);
       this.resetLocalStorage();
+      this.resetLocalObject();
       return true;
     } else if (isValid && type === 'input') {
       Object.assign(formData, data);
@@ -31,6 +33,9 @@ const storageService = {
     if (checkData(data)) return data;
     this.resetLocalStorage();
     return null;
+  },
+  resetLocalObject() {
+    Object.assign(formData, { email: '', message: '' });
   },
   resetLocalStorage() {
     localStorage.removeItem('feedback-form-state');
@@ -81,8 +86,7 @@ const handelEvent = e => {
     feedbackForm.reset();
   }
 };
+writeToInput();
 
 feedbackForm.addEventListener('input', handelEvent);
 feedbackForm.addEventListener('submit', handelEvent);
-
-writeToInput();
