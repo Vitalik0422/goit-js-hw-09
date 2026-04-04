@@ -87,10 +87,5 @@ const galleryLightBox = new SimpleLightbox('.gallery a', {
   captionSelector: 'img',
   captionsData: 'alt',
   captionPosition: 'bottom',
-  captionDelay: '250ms',
-});
-
-galleryLightBox.on('show.simplelightbox', function (e) {});
-galleryLightBox.on('error.simplelightbox', function (e) {
-  console.log(e);
+  captionDelay: '250',
 });
